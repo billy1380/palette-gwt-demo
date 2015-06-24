@@ -13,6 +13,7 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
+import com.willshex.palette.shared.Palette;
 
 /**
  * @author billy1380
@@ -31,32 +32,45 @@ public class PaletteView extends Composite {
 	@UiField Element elMutedDark;
 	@UiField Element elMutedLight;
 
-	public PaletteView () {
+	public PaletteView() {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
-	public void setVibrantColour (String value) {
+	public void setPalette(Palette palette) {
+		setVibrantColour(cssColour(palette.getVibrantColor(0xFF000000)));
+		setVibrantDarkColour(cssColour(palette.getDarkVibrantColor(0xFF000000)));
+		setVibrantLightColour(cssColour(palette.getLightVibrantColor(0xFFFFFFFF)));
+		setMutedColour(cssColour(palette.getMutedColor(0xFF000000)));
+		setMutedDarkColour(cssColour(palette.getDarkMutedColor(0xFF000000)));
+		setMutedLightColour(cssColour(palette.getLightMutedColor(0xFFFFFFFF)));
+	}
+
+	public void setVibrantColour(String value) {
 		elVibrant.getStyle().setBackgroundColor(value);
 	}
 
-	public void setVibrantDarkColour (String value) {
+	public void setVibrantDarkColour(String value) {
 		elVibrantDark.getStyle().setBackgroundColor(value);
 	}
 
-	public void setVibrantLightColour (String value) {
+	public void setVibrantLightColour(String value) {
 		elVibrantLight.getStyle().setBackgroundColor(value);
 	}
 
-	public void setMutedColour (String value) {
+	public void setMutedColour(String value) {
 		elMuted.getStyle().setBackgroundColor(value);
 	}
 
-	public void setMutedDarkColour (String value) {
+	public void setMutedDarkColour(String value) {
 		elMutedDark.getStyle().setBackgroundColor(value);
 	}
 
-	public void setMutedLightColour (String value) {
+	public void setMutedLightColour(String value) {
 		elMutedLight.getStyle().setBackgroundColor(value);
+	}
+
+	private String cssColour(int colour) {
+		return ("#" + Integer.toHexString(colour)).replace("#ff", "#");
 	}
 
 }

@@ -10,25 +10,47 @@
 	.margin-bottom {
 		margin-button: 20px;
 	}
+	
+	.image {
+		width: 100%;
+		height: 100%;
+	}
 	</ui:style>
 	<g:HTMLPanel styleName="container {style.margin-bottom}">
 
 		<h1>GWT Palette</h1>
 
-		<p>Desctiption of Gwt Palette and sources</p>
-		<p>Location of the repo</p>
-		<p>Thanks for lorempixel images</p>
+		<p>
+			This is a demo of palette-gwt library. The library is a port of
+			<a
+				href="https://developer.android.com/reference/android/support/v7/graphics/Palette.html">the Palette class</a>
+			to work with GWT in the browser (as can be seen below).
+		</p>
+		<p>
+			The gwt library can be forked
+			<a href="https://github.com/billy1380/palette-gwt">billy1380/palette-gwt</a>
+			. The demo
+			<a href="https://github.com/billy1380/palette-gwt-demo">source</a>
+			is also apache license if you are interested in how it is used.
+		</p>
+		<p>
+			All images obtained from
+			<a href="http://www.lorempixel.com">lorempixel.com</a>
+			.
+		</p>
 
 		<div class="row">
 			<div class="col-sm-6">
 				<div>
-					<g:Image resource="{INSTANCE.abstractImage}" ui:field="abstractImage" />
+					<g:Image resource="{INSTANCE.abstractImage}" ui:field="abstractImage"
+						altText="Abstract Image" styleName="{style.image}" />
 				</div>
 				<p:PaletteView ui:field="abstractPalette" />
 			</div>
 			<div class="col-sm-6">
 				<div>
-					<g:Image resource="{INSTANCE.breadImage}" ui:field="breadImage" />
+					<g:Image resource="{INSTANCE.breadImage}" ui:field="breadImage"
+						altText="Bread Image" styleName="{style.image}" />
 				</div>
 				<p:PaletteView ui:field="breadPalette" />
 			</div>
@@ -36,13 +58,15 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<div>
-					<g:Image resource="{INSTANCE.cityImage}" ui:field="cityImage" />
+					<g:Image resource="{INSTANCE.cityImage}" ui:field="cityImage"
+						altText="City Image" styleName="{style.image}" />
 				</div>
 				<p:PaletteView ui:field="cityPalette" />
 			</div>
 			<div class="col-sm-6">
 				<div>
-					<g:Image resource="{INSTANCE.foodImage}" ui:field="foodImage" />
+					<g:Image resource="{INSTANCE.foodImage}" ui:field="foodImage"
+						altText="Food Image" styleName="{style.image}" />
 				</div>
 				<p:PaletteView ui:field="foodPalette" />
 			</div>
