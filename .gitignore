@@ -30,7 +30,7 @@ www-test/
 # mac os x
 .DS_STORE
 
-/war/palettedemo/
+/war/demo/
 
 # eclipse
 .settings
