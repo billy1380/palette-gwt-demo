@@ -26,3 +26,11 @@ www-test/
 
 #old GWT (1.5) created this dir
 .gwt-tmp/
+
+# mac os x
+.DS_STORE
+
+/war/palettedemo/
+
+# eclipse
+.settings

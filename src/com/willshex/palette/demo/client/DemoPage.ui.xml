@@ -1,0 +1,52 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:p="urn:import:com.willshex.palette.demo.client.part">
+	<ui:import field="com.willshex.palette.demo.client.Images.INSTANCE" />
+	<ui:style>
+	body {
+		font-family: 'Noto Sans', sans-serif;
+	}
+	
+	.margin-bottom {
+		margin-button: 20px;
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="container {style.margin-bottom}">
+
+		<h1>GWT Palette</h1>
+
+		<p>Desctiption of Gwt Palette and sources</p>
+		<p>Location of the repo</p>
+		<p>Thanks for lorempixel images</p>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<div>
+					<g:Image resource="{INSTANCE.abstractImage}" ui:field="abstractImage" />
+				</div>
+				<p:PaletteView ui:field="abstractPalette" />
+			</div>
+			<div class="col-sm-6">
+				<div>
+					<g:Image resource="{INSTANCE.breadImage}" ui:field="breadImage" />
+				</div>
+				<p:PaletteView ui:field="breadPalette" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div>
+					<g:Image resource="{INSTANCE.cityImage}" ui:field="cityImage" />
+				</div>
+				<p:PaletteView ui:field="cityPalette" />
+			</div>
+			<div class="col-sm-6">
+				<div>
+					<g:Image resource="{INSTANCE.foodImage}" ui:field="foodImage" />
+				</div>
+				<p:PaletteView ui:field="foodPalette" />
+			</div>
+		</div>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

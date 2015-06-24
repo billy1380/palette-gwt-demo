@@ -1,0 +1,36 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTMLPanel styleName="row">
+			<div class="col-sm-4">
+				<span class="img-circle col-sm-3" ui:field="elVibrant">&nbsp;</span>
+				<span class="col-sm-9 h2">Vibrant</span>
+			</div>
+			<div class="col-sm-4">
+				<span class="img-circle col-sm-3" ui:field="elVibrantDark">&nbsp;</span>
+				<span class="col-sm-9 h2">Vibrant Dark</span>
+			</div>
+			<div class="col-sm-4">
+				<span class="img-circle col-sm-3" ui:field="elVibrantLight">&nbsp;</span>
+				<span class="col-sm-9 h2">Vibrant Light</span>
+			</div>
+		</g:HTMLPanel>
+		<g:HTMLPanel styleName="row">
+			<div class="col-sm-4">
+				<span class="img-circle col-sm-3" ui:field="elMuted">&nbsp;</span>
+				<span class="col-sm-9 h2">Muted</span>
+			</div>
+			<div class="col-sm-4">
+				<span class="img-circle col-sm-3" ui:field="elMutedDark">&nbsp;</span>
+				<span class="col-sm-9 h2">Muted Dark</span>
+			</div>
+			<div class="col-sm-4">
+				<span class="img-circle col-sm-3" ui:field="elMutedLight">&nbsp;</span>
+				<span class="col-sm-9 h2">Muted Light</span>
+			</div>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 
