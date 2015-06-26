@@ -13,6 +13,7 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
+import com.willshex.palette.shared.Color;
 import com.willshex.palette.shared.Palette;
 
 /**
@@ -37,12 +38,12 @@ public class PaletteView extends Composite {
 	}
 
 	public void setPalette(Palette palette) {
-		setVibrantColour(cssColour(palette.getVibrantColor(0xFF000000)));
-		setVibrantDarkColour(cssColour(palette.getDarkVibrantColor(0xFF000000)));
-		setVibrantLightColour(cssColour(palette.getLightVibrantColor(0xFFFFFFFF)));
-		setMutedColour(cssColour(palette.getMutedColor(0xFF000000)));
-		setMutedDarkColour(cssColour(palette.getDarkMutedColor(0xFF000000)));
-		setMutedLightColour(cssColour(palette.getLightMutedColor(0xFFFFFFFF)));
+		setVibrantColour(Color.toHtmlColor(palette.getVibrantColor(Color.BLACK)));
+		setVibrantDarkColour(Color.toHtmlColor(palette.getDarkVibrantColor(Color.BLACK)));
+		setVibrantLightColour(Color.toHtmlColor(palette.getLightVibrantColor(Color.WHITE)));
+		setMutedColour(Color.toHtmlColor(palette.getMutedColor(Color.BLACK)));
+		setMutedDarkColour(Color.toHtmlColor(palette.getDarkMutedColor(Color.BLACK)));
+		setMutedLightColour(Color.toHtmlColor(palette.getLightMutedColor(Color.WHITE)));
 	}
 
 	public void setVibrantColour(String value) {
@@ -67,10 +68,6 @@ public class PaletteView extends Composite {
 
 	public void setMutedLightColour(String value) {
 		elMutedLight.getStyle().setBackgroundColor(value);
-	}
-
-	private String cssColour(int colour) {
-		return ("#" + Integer.toHexString(colour)).replace("#ff", "#");
 	}
 
 }
