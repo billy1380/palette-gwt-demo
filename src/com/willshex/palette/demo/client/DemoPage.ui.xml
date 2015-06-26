@@ -49,7 +49,7 @@
 			</div>
 			<div class="col-sm-6">
 				<div>
-					<g:Image resource="{INSTANCE.breadImage}" ui:field="breadImage"
+					<g:Image resource="{INSTANCE.aeroplaneImage}" ui:field="breadImage"
 						altText="Bread Image" styleName="{style.image}" />
 				</div>
 				<p:PaletteView ui:field="breadPalette" />

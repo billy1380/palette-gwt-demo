@@ -21,8 +21,8 @@ public interface Images extends ClientBundle {
 	@Source("res/abstract.jpg")
 	ImageResource abstractImage ();
 
-	@Source("res/bread.jpg")
-	ImageResource breadImage ();
+	@Source("res/aeroplane.jpg")
+	ImageResource aeroplaneImage ();
 
 	@Source("res/city.jpg")
 	ImageResource cityImage ();
